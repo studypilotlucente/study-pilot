@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StudyPilot Pricing</title>
+  <title>StudyPilot Free Tier</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero">
     <nav class="navbar">
       <h1 class="logo">StudyPilot</h1>
-      <a href="#pricing" class="nav-btn">View Pricing</a>
+      <a href="#free-tools" class="nav-btn">Try Free Tools</a>
     </nav>
 
     <div class="hero-content">
-      <h2>Study smarter. Score higher.</h2>
+      <h2>Study smarter for free.</h2>
       <p>
-        From everyday study support to full exam mastery, StudyPilot helps
-        students learn faster with powerful AI tools.
+        Upload notes, create flashcards, and test yourself with simple quizzes.
       </p>
-      <a href="#pricing" class="primary-btn">See Plans</a>
+      <a href="#free-tools" class="primary-btn">Start Studying</a>
     </div>
   </header>
 
@@ -31,10 +30,11 @@
       </p>
 
       <div class="pricing-container">
-        <div class="card free">
+        <div class="card free featured">
+          <div class="badge">Live Now</div>
           <h3>Free</h3>
           <p class="price">$0<span>/month</span></p>
-          <p class="card-purpose">Grow users</p>
+          <p class="card-purpose">Basic study tools</p>
           <ul>
             <li>Community study library</li>
             <li>Upload notes</li>
@@ -43,11 +43,10 @@
             <li>Limited study tools</li>
             <li>No AI chatbot</li>
           </ul>
-          <button class="plan-btn">Get Started</button>
+          <a href="#free-tools" class="plan-btn">Use Free Tier</a>
         </div>
 
-        <div class="card premium featured">
-          <div class="badge">Most Popular</div>
+        <div class="card premium">
           <h3>Premium</h3>
           <p class="price">$20<span>/month</span></p>
           <p class="card-purpose">Core AI tutor</p>
@@ -59,7 +58,7 @@
             <li>AI study planner</li>
             <li>Basic essay feedback</li>
           </ul>
-          <button class="plan-btn">Upgrade to Premium</button>
+          <button class="plan-btn locked-btn">Coming Soon</button>
         </div>
 
         <div class="card exam">
@@ -78,25 +77,72 @@
             <li>Detailed writing feedback</li>
             <li>Exam strategy coaching</li>
           </ul>
-          <button class="plan-btn">Go Exam Ready</button>
+          <button class="plan-btn locked-btn">Coming Soon</button>
         </div>
       </div>
     </section>
 
-    <section class="why-section">
-      <h2>Why StudyPilot?</h2>
-      <div class="features-grid">
-        <div class="feature-box">
-          <h4>AI-Powered Learning</h4>
-          <p>Get explanations, quizzes, and flashcards tailored to your needs.</p>
+    <section class="tool-section" id="free-tools">
+      <h2>Free Study Tools</h2>
+      <p class="section-subtext">Everything below works in the free tier.</p>
+
+      <div class="tool-grid">
+        <div class="tool-card">
+          <h3>1. Save Notes</h3>
+          <input type="text" id="noteTitle" placeholder="Subject or topic title" />
+          <textarea id="noteInput" placeholder="Paste your notes here..."></textarea>
+          <button id="saveNoteBtn" class="plan-btn">Save Notes</button>
         </div>
-        <div class="feature-box">
-          <h4>Exam Confidence</h4>
-          <p>Practice with realistic timed exams and improve where you’re weakest.</p>
+
+        <div class="tool-card">
+          <h3>2. Create Flashcards</h3>
+          <input type="text" id="flashQuestion" placeholder="Front of flashcard" />
+          <input type="text" id="flashAnswer" placeholder="Back of flashcard" />
+          <button id="addFlashcardBtn" class="plan-btn">Add Flashcard</button>
+
+          <div class="flashcard-box" id="flashcardBox">
+            <p id="flashcardText">No flashcards yet</p>
+          </div>
+
+          <div class="flashcard-actions">
+            <button id="flipFlashcardBtn" class="plan-btn">Flip</button>
+            <button id="nextFlashcardBtn" class="plan-btn">Next</button>
+          </div>
         </div>
-        <div class="feature-box">
-          <h4>Built for Students</h4>
-          <p>Everything is designed to make studying easier, faster, and less stressful.</p>
+
+        <div class="tool-card">
+          <h3>3. Build a Quiz</h3>
+          <input type="text" id="quizQuestion" placeholder="Quiz question" />
+          <input type="text" id="quizAnswer" placeholder="Correct answer" />
+          <button id="addQuizBtn" class="plan-btn">Add Quiz Question</button>
+        </div>
+
+        <div class="tool-card">
+          <h3>4. Take Quiz</h3>
+          <div id="quizDisplay">No quiz questions yet</div>
+          <input type="text" id="userQuizAnswer" placeholder="Your answer" />
+          <button id="checkQuizBtn" class="plan-btn">Check Answer</button>
+          <p id="quizResult"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="library-section">
+      <h2>Your Study Library</h2>
+      <div class="library-grid">
+        <div class="library-box">
+          <h3>Saved Notes</h3>
+          <div id="notesList"></div>
+        </div>
+
+        <div class="library-box">
+          <h3>Saved Flashcards</h3>
+          <div id="flashcardsList"></div>
+        </div>
+
+        <div class="library-box">
+          <h3>Saved Quiz Questions</h3>
+          <div id="quizList"></div>
         </div>
       </div>
     </section>
