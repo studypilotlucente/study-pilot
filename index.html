@@ -1,157 +1,112 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>StudyPilot</title>
-<link rel="stylesheet" href="style.css">
+  <title>StudyPilot</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="navbar">
-
-<img src="logo.png" class="logo">
-
-<h1>StudyPilot</h1>
-
+  <img src="IMG_0681.jpeg" class="logo">
+  <h1>StudyPilot</h1>
 </header>
 
-
 <section class="hero">
-
-<h2>Study smarter. Score higher.</h2>
-
-<p>Free study tools with optional AI upgrades.</p>
-
+  <h2>Study smarter. Score higher.</h2>
+  <p>Free study tools with optional AI upgrades.</p>
 </section>
-
-
 
 <section class="tools">
 
-<h2>Free Study Tools</h2>
+  <h2>Free Study Tools</h2>
+
+  <div class="tool">
+    <h3>Notes</h3>
+
+    <textarea id="notesInput" placeholder="Write your notes..."></textarea>
+
+    <button onclick="saveNotes()">Save Notes</button>
+
+    <div id="notesList"></div>
+  </div>
 
 
-<div class="tool">
+  <div class="tool">
+    <h3>Flashcards</h3>
 
-<h3>Notes</h3>
+    <input id="flashFront" placeholder="Front of flashcard">
+    <input id="flashBack" placeholder="Back of flashcard">
 
-<textarea id="notesInput" placeholder="Write your notes..."></textarea>
+    <button onclick="addFlashcard()">Add Flashcard</button>
 
-<button onclick="saveNotes()">Save Notes</button>
-
-<div id="notesList"></div>
-
-</div>
-
+    <div id="flashcardsList"></div>
+  </div>
 
 
-<div class="tool">
+  <div class="tool">
+    <h3>Quiz</h3>
 
-<h3>Flashcards</h3>
+    <input id="quizQuestion" placeholder="Question">
+    <input id="quizAnswer" placeholder="Answer">
 
-<input id="flashFront" placeholder="Front of flashcard">
+    <button onclick="addQuiz()">Add Question</button>
 
-<input id="flashBack" placeholder="Back of flashcard">
-
-<button onclick="addFlashcard()">Add Flashcard</button>
-
-<div id="flashcardsList"></div>
-
-</div>
-
-
-
-<div class="tool">
-
-<h3>Quiz</h3>
-
-<input id="quizQuestion" placeholder="Question">
-
-<input id="quizAnswer" placeholder="Answer">
-
-<button onclick="addQuiz()">Add Question</button>
-
-<div id="quizList"></div>
-
-</div>
-
+    <div id="quizList"></div>
+  </div>
 
 </section>
-
 
 
 <section class="pricing">
 
 <h2>Pricing</h2>
 
-
 <div class="plan">
-
 <h3>Free</h3>
-
 <p>$0 / month</p>
 
 <ul>
-
 <li>Community study library</li>
-
 <li>Upload notes</li>
-
 <li>Basic flashcards</li>
-
 <li>Basic quizzes</li>
-
 </ul>
 
 </div>
 
 
 <div class="plan">
-
 <h3>Premium</h3>
-
 <p>$20 / month</p>
 
 <ul>
-
 <li>AI study chatbot</li>
-
 <li>AI explanations</li>
-
 <li>AI flashcard generator</li>
-
 <li>AI quizzes</li>
-
 <li>AI study planner</li>
-
+<li>Basic essay feedback</li>
 </ul>
 
 </div>
 
 
 <div class="plan">
-
 <h3>Premium+ Exam</h3>
-
 <p>$40 / month</p>
 
 <ul>
-
-<li>Exam generator</li>
-
+<li>Full exam generator</li>
 <li>Timed exam simulations</li>
-
 <li>AI grading</li>
-
+<li>Score predictions</li>
 <li>Weakness analysis</li>
-
 </ul>
 
 </div>
 
 </section>
-
-
 
 <script src="script.js"></script>
 
