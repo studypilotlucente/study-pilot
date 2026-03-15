@@ -1,157 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StudyPilot Free Tier</title>
-  <link rel="stylesheet" href="style.css" />
+<title>StudyPilot</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header class="hero">
-    <nav class="navbar">
-      <h1 class="logo">StudyPilot</h1>
-      <a href="#free-tools" class="nav-btn">Try Free Tools</a>
-    </nav>
 
-    <div class="hero-content">
-      <h2>Study smarter for free.</h2>
-      <p>
-        Upload notes, create flashcards, and test yourself with simple quizzes.
-      </p>
-      <a href="#free-tools" class="primary-btn">Start Studying</a>
-    </div>
-  </header>
+<header class="navbar">
 
-  <main>
-    <section class="pricing-section" id="pricing">
-      <h2>Choose Your Plan</h2>
-      <p class="section-subtext">
-        Start free, then upgrade when you’re ready for AI-powered study support.
-      </p>
+<img src="logo.png" class="logo">
 
-      <div class="pricing-container">
-        <div class="card free featured">
-          <div class="badge">Live Now</div>
-          <h3>Free</h3>
-          <p class="price">$0<span>/month</span></p>
-          <p class="card-purpose">Basic study tools</p>
-          <ul>
-            <li>Community study library</li>
-            <li>Upload notes</li>
-            <li>Basic flashcards</li>
-            <li>Basic quizzes</li>
-            <li>Limited study tools</li>
-            <li>No AI chatbot</li>
-          </ul>
-          <a href="#free-tools" class="plan-btn">Use Free Tier</a>
-        </div>
+<h1>StudyPilot</h1>
 
-        <div class="card premium">
-          <h3>Premium</h3>
-          <p class="price">$20<span>/month</span></p>
-          <p class="card-purpose">Core AI tutor</p>
-          <ul>
-            <li>AI study chatbot</li>
-            <li>AI explanations</li>
-            <li>AI flashcard generator</li>
-            <li>AI quizzes</li>
-            <li>AI study planner</li>
-            <li>Basic essay feedback</li>
-          </ul>
-          <button class="plan-btn locked-btn">Coming Soon</button>
-        </div>
+</header>
 
-        <div class="card exam">
-          <h3>Premium+ Exam</h3>
-          <p class="price">$40<span>/month</span></p>
-          <p class="card-purpose">Advanced exam prep</p>
-          <ul>
-            <li>Full HSC exam generator</li>
-            <li>SAT practice tests</li>
-            <li>IB / GCSE exams</li>
-            <li>Timed exam simulations</li>
-            <li>AI grading</li>
-            <li>Score predictions</li>
-            <li>Weakness analysis</li>
-            <li>Advanced essay marking</li>
-            <li>Detailed writing feedback</li>
-            <li>Exam strategy coaching</li>
-          </ul>
-          <button class="plan-btn locked-btn">Coming Soon</button>
-        </div>
-      </div>
-    </section>
 
-    <section class="tool-section" id="free-tools">
-      <h2>Free Study Tools</h2>
-      <p class="section-subtext">Everything below works in the free tier.</p>
+<section class="hero">
 
-      <div class="tool-grid">
-        <div class="tool-card">
-          <h3>1. Save Notes</h3>
-          <input type="text" id="noteTitle" placeholder="Subject or topic title" />
-          <textarea id="noteInput" placeholder="Paste your notes here..."></textarea>
-          <button id="saveNoteBtn" class="plan-btn">Save Notes</button>
-        </div>
+<h2>Study smarter. Score higher.</h2>
 
-        <div class="tool-card">
-          <h3>2. Create Flashcards</h3>
-          <input type="text" id="flashQuestion" placeholder="Front of flashcard" />
-          <input type="text" id="flashAnswer" placeholder="Back of flashcard" />
-          <button id="addFlashcardBtn" class="plan-btn">Add Flashcard</button>
+<p>Free study tools with optional AI upgrades.</p>
 
-          <div class="flashcard-box" id="flashcardBox">
-            <p id="flashcardText">No flashcards yet</p>
-          </div>
+</section>
 
-          <div class="flashcard-actions">
-            <button id="flipFlashcardBtn" class="plan-btn">Flip</button>
-            <button id="nextFlashcardBtn" class="plan-btn">Next</button>
-          </div>
-        </div>
 
-        <div class="tool-card">
-          <h3>3. Build a Quiz</h3>
-          <input type="text" id="quizQuestion" placeholder="Quiz question" />
-          <input type="text" id="quizAnswer" placeholder="Correct answer" />
-          <button id="addQuizBtn" class="plan-btn">Add Quiz Question</button>
-        </div>
 
-        <div class="tool-card">
-          <h3>4. Take Quiz</h3>
-          <div id="quizDisplay">No quiz questions yet</div>
-          <input type="text" id="userQuizAnswer" placeholder="Your answer" />
-          <button id="checkQuizBtn" class="plan-btn">Check Answer</button>
-          <p id="quizResult"></p>
-        </div>
-      </div>
-    </section>
+<section class="tools">
 
-    <section class="library-section">
-      <h2>Your Study Library</h2>
-      <div class="library-grid">
-        <div class="library-box">
-          <h3>Saved Notes</h3>
-          <div id="notesList"></div>
-        </div>
+<h2>Free Study Tools</h2>
 
-        <div class="library-box">
-          <h3>Saved Flashcards</h3>
-          <div id="flashcardsList"></div>
-        </div>
 
-        <div class="library-box">
-          <h3>Saved Quiz Questions</h3>
-          <div id="quizList"></div>
-        </div>
-      </div>
-    </section>
-  </main>
+<div class="tool">
 
-  <footer>
-    <p>© 2026 StudyPilot. All rights reserved.</p>
-  </footer>
+<h3>Notes</h3>
 
-  <script src="script.js"></script>
+<textarea id="notesInput" placeholder="Write your notes..."></textarea>
+
+<button onclick="saveNotes()">Save Notes</button>
+
+<div id="notesList"></div>
+
+</div>
+
+
+
+<div class="tool">
+
+<h3>Flashcards</h3>
+
+<input id="flashFront" placeholder="Front of flashcard">
+
+<input id="flashBack" placeholder="Back of flashcard">
+
+<button onclick="addFlashcard()">Add Flashcard</button>
+
+<div id="flashcardsList"></div>
+
+</div>
+
+
+
+<div class="tool">
+
+<h3>Quiz</h3>
+
+<input id="quizQuestion" placeholder="Question">
+
+<input id="quizAnswer" placeholder="Answer">
+
+<button onclick="addQuiz()">Add Question</button>
+
+<div id="quizList"></div>
+
+</div>
+
+
+</section>
+
+
+
+<section class="pricing">
+
+<h2>Pricing</h2>
+
+
+<div class="plan">
+
+<h3>Free</h3>
+
+<p>$0 / month</p>
+
+<ul>
+
+<li>Community study library</li>
+
+<li>Upload notes</li>
+
+<li>Basic flashcards</li>
+
+<li>Basic quizzes</li>
+
+</ul>
+
+</div>
+
+
+<div class="plan">
+
+<h3>Premium</h3>
+
+<p>$20 / month</p>
+
+<ul>
+
+<li>AI study chatbot</li>
+
+<li>AI explanations</li>
+
+<li>AI flashcard generator</li>
+
+<li>AI quizzes</li>
+
+<li>AI study planner</li>
+
+</ul>
+
+</div>
+
+
+<div class="plan">
+
+<h3>Premium+ Exam</h3>
+
+<p>$40 / month</p>
+
+<ul>
+
+<li>Exam generator</li>
+
+<li>Timed exam simulations</li>
+
+<li>AI grading</li>
+
+<li>Weakness analysis</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
